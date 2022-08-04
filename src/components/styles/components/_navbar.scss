@@ -1,0 +1,154 @@
+
+@mixin navbar-styles {
+  .navbar {
+    width: 100%;
+    height: 10vh;
+    z-index: 5;
+    display: flex;
+    .icon-box {
+      width: 15%;
+      @include align-box-center();
+
+      gap: 0.5rem;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .category-box {
+      width: 65%;
+      @include align-box-center($jc: start);
+      a {
+        margin-left: 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.85rem;
+        @include hover-effect;
+      }
+    }
+    .button-box {
+      width: 20%;
+      @include align-box-center();
+      gap: 1.5rem;
+      h6 {
+        @include hover-effect;
+      }
+      button {
+        @include black-btn;
+      }
+    }
+    .menu-status {
+      visibility: hidden;
+      opacity: 0;
+      display: none;
+    }
+    @include sm {
+      .icon-box {
+        width: 45%;
+      }
+      .category-box {
+        width: 30%;
+      }
+      .button-box {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+      }
+      .menu-status {
+        width: 18%;
+        @include align-box-center($jc: end);
+        visibility: visible;
+        opacity: 1;
+      }
+      .category-box {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+  .fixed {
+    position: fixed;
+  }
+  .floating-menubar,
+  .floating-menubar-pop {
+    display: none;
+  }
+  @include sm {
+    .floating-menubar {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      @include transition;
+      transform: translate(0, -140%);
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+      @include align-box-center($ai: end);
+      a {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.5rem;
+        @include hover-effect;
+      }
+      .button-box {
+        width: 30%;
+        font-size: 1.4rem;
+        @include align-box-center($jc: end);
+        gap: 1.5rem;
+        h6 {
+          font-size: 1.4rem;
+          @include hover-effect;
+        }
+        button {
+          @include black-btn;
+        }
+      }
+    }
+    .floating-menubar-pop {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      @include transition;
+      transform: translate(0, 0);
+      opacity: 1;
+      visibility: visible;
+      z-index: -1;
+      @include align-box-center($ai: end);
+      a {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.5rem;
+        @include hover-effect;
+      }
+      .button-box {
+        width: 30%;
+        font-size: 1.4rem;
+        @include align-box-center($jc: end);
+        gap: 1.5rem;
+        h6 {
+          font-size: 1.4rem;
+          @include hover-effect;
+        }
+        button {
+          @include black-btn;
+        }
+      }
+    }
+
+    .navbar {
+      .icon-box {
+        @include align-box-center();
+        gap: 0.8rem;
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+        h5 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

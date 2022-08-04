@@ -1,0 +1,43 @@
+@mixin xsm {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin align-box-center($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+
+@mixin transition {
+  transition: all 400ms ;
+}
+
+@mixin hover-effect {
+  @include transition();
+  &:hover {
+    transform: scale(1.1);
+  }
+}

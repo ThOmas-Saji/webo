@@ -1,0 +1,12 @@
+
+@mixin black-btn {
+  background-color: $button-bg-black;
+  color: $button-color;
+  border-radius: 6px;
+  padding: 0.4rem 0.5rem ;
+  min-width: 100px;
+  @include transition();
+  &:hover {
+    background-color: #404041ee;
+  }
+}

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@import "components/styles/main.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  background-color: $backgorund-white;
+}
+
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+p {
+  font-size: 1;
+  font-weight: 350;
+}
+
+@include xl {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include lg {
+  html {
+    font-size: 14px;
+  }
+}
+
+@include md {
+  html {
+    font-size: 12px;
+  }
+}
+
+@include sm {
+  html {
+    font-size: 10px;
+  }
+}
+
+@include xsm {
+  html {
+    font-size: 10px;
+  }
+}

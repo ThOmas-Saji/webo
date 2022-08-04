@@ -1,0 +1,14 @@
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'components/buttons';
+
+//navbar styles start
+@import 'components/navbar';
+.navbar-container {
+  * {
+    // border: 1px solid red;
+  }
+  @include navbar-styles;
+}
+//navbar styles end
