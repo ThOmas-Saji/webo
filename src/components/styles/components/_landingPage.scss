@@ -1,0 +1,90 @@
+@mixin landingPage-styles {
+  padding-top: 25%;
+  @include md {
+    padding-top: 15%;
+  }
+  @include sm {
+    padding-top: 50%;
+  }
+  @include xsm {
+    padding-top: 55%;
+  }
+  .image-box {
+    position: absolute;
+    width: 100%;
+    z-index: -1; 
+    img {
+      width: 100%;
+    }
+    .img-full {
+      display: block;
+    }
+    .img-tab {
+      display: none;
+    }
+    .img-mob {
+      display: none;
+    }
+    @include sm {
+      .img-full {
+        display: none;
+      }
+      .img-mob {
+        display: block;
+      }
+      .img-tab {
+        display: none;
+      }
+    }
+
+    @include xsm {
+      .img-full {
+        display: none;
+      }
+      .img-mob {
+        display: none;
+      }
+      .img-tab {
+        display: block;
+      }
+    }
+  }
+  .landingPage-content {
+    position: relative;
+    margin: 2.8rem;
+    width: 40%;
+    padding: 2rem;
+    border-radius: 2.8rem;
+    background: rgb(255, 200, 103);
+    background: linear-gradient(
+      153deg,
+      rgba(255, 200, 103, 1) 0%,
+      rgba(255, 200, 103, 1) 69%,
+      rgba(255, 255, 255, 1) 96%
+    );
+    @include md {
+      width: 40%;
+    }
+    @include sm {
+      width: 50%;
+    }
+    @include xsm {
+      width: 60%;
+    }
+    h3 {
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -0.03em;
+    }
+    p {
+      padding: 1rem 0;
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+    }
+    button {
+      margin: 1rem 0;
+      @include black-btn;
+    }
+  }
+}

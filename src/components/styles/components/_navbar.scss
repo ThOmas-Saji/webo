@@ -5,14 +5,19 @@
     height: 10vh;
     z-index: 5;
     display: flex;
+    background: $backgorund-white;
     .icon-box {
       width: 15%;
+      cursor: pointer;
       @include align-box-center();
-
       gap: 0.5rem;
       img {
         width: 1.5rem;
         height: 1.5rem;
+        @include transition(1s);
+        &:hover {
+          transform: rotate(360deg);
+        }
       }
     }
     .category-box {
@@ -75,6 +80,8 @@
   }
   @include sm {
     .floating-menubar {
+      width: 100%;
+      position: fixed;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -83,7 +90,8 @@
       transform: translate(0, -140%);
       opacity: 0;
       visibility: hidden;
-      z-index: -1;
+      z-index: 4;
+      background-color: $backgorund-white;
       @include align-box-center($ai: end);
       a {
         cursor: pointer;
@@ -106,6 +114,8 @@
       }
     }
     .floating-menubar-pop {
+      position: fixed;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -114,7 +124,8 @@
       transform: translate(0, 0);
       opacity: 1;
       visibility: visible;
-      z-index: -1;
+      z-index: 4;
+      background-color: $backgorund-white;
       @include align-box-center($ai: end);
       a {
         cursor: pointer;

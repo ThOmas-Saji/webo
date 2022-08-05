@@ -10,8 +10,10 @@ const Navbar = () => {
     <nav className="navbar-container">
       <div className="navbar fixed">
         <div className="icon-box">
-          <img src={appIcon} alt="app icon" />
-          <h5>Untitled</h5>
+          <a className="icon-box" href="/">
+            <img src={appIcon} alt="app icon" />
+            <h5>Untitled</h5>
+          </a>
         </div>
 
         <div className="category-box">
@@ -27,9 +29,15 @@ const Navbar = () => {
         </div>
         <div className="menu-status">
           {!popUp ? (
-            <FiMenu className="text-[3rem]" onClick={() => setPopup(!popUp)} />
+            <FiMenu
+              className="text-[3rem] cursor-pointer hover:scale-125 transition-all"
+              onClick={() => setPopup(!popUp)}
+            />
           ) : (
-            <GrClose className="text-[3rem]" onClick={() => setPopup(!popUp)} />
+            <GrClose
+              className="text-[3rem] cursor-pointer hover:scale-125 transition-all"
+              onClick={() => setPopup(!popUp)}
+            />
           )}
         </div>
       </div>
