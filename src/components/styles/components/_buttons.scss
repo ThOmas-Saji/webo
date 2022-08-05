@@ -1,9 +1,9 @@
 
-@mixin black-btn {
+@mixin black-btn($py:0.4rem, $px:0.5rem) {
   background-color: $button-bg-black;
   color: $button-color;
   border-radius: 6px;
-  padding: 0.4rem 0.5rem ;
+  padding: $py $px ;
   min-width: 100px;
   @include transition();
   &:hover {

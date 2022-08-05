@@ -19,13 +19,20 @@
   }
 }
 @mixin xl {
-  @media (max-width: 1800px) {
+  @media (max-width: 1640px) {
     @content;
   }
 }
 
-@mixin align-box-center($jc: center, $ai: center) {
+@mixin xxl {
+  @media (min-width: 1640px) {
+    @content;
+  }
+}
+
+@mixin align-box-center($jc: center, $ai: center, $fd:row) {
   display: flex;
+  flex-direction: $fd;
   justify-content: $jc;
   align-items: $ai;
 }

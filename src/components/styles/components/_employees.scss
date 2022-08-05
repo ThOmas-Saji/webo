@@ -1,0 +1,71 @@
+@mixin emp-styles(
+  $md: #2b6587,
+  $img-bg: #1ab0c0,
+  $h6-c: #00b5c0,
+  $p-c: #00f0ff
+) {
+  width: 80%;
+  height: 10vh;
+  min-width: fit-content;
+  border-radius: 0.8rem;
+  background-color: $md;
+  display: flex;
+  padding: 0.5rem;
+  gap: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transform: scale(0.8);
+  img {
+    width: fit-content;
+    border-radius: 0.8rem;
+    background-color: $img-bg;
+  }
+  h6 {
+    color: $h6-c;
+    font-size: 0.8rem;
+    letter-spacing: 0.08rem;
+  }
+  p {
+    color: $p-c;
+    font-weight: 600;
+  }
+}
+
+@mixin employee-style {
+  .employee1 {
+    @include emp-styles(
+      $md: #2b6587,
+      $img-bg: #1ab0c0,
+      $h6-c: #00b5c0,
+      $p-c: #00f0ff
+    );
+    margin-left: -2rem;
+  }
+  .employee2 {
+    @include emp-styles(
+      $md: #f6ca7d,
+      $img-bg: #fdf3c6,
+      $h6-c: #cd8200,
+      $p-c: #805100
+    );
+    margin-left: -2rem;
+  }
+  .employee3 {
+    @include emp-styles(
+      $md: #bcb8fa,
+      $img-bg: #6654f5,
+      $h6-c: #2015c8,
+      $p-c: #08008b
+    );
+    margin-right: -2rem;
+  }
+  .employee4 {
+    @include emp-styles(
+      $md: #ffa1ab,
+      $img-bg: #ee79c3,
+      $h6-c: #af0013,
+      $p-c: #82000e
+    );
+    margin-top: -2rem;
+  }
+}

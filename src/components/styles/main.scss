@@ -7,6 +7,22 @@
 @import "components/navbar";
 .navbar-container {
   @include navbar-styles;
+  margin-bottom: 15%;
+  @include xl {
+    margin-bottom: 11%;
+  }
+  @include lg {
+    margin-bottom: 12%;
+  }
+  @include md {
+    margin-bottom: 17%;
+  }
+  @include sm {
+    margin-bottom: 50%;
+  }
+  @include xsm {
+    margin-bottom: 50%;
+  }
 }
 //navbar styles end
 
@@ -15,8 +31,15 @@
 .landingPage-container {
   * {
     // border: 1px solid red;
-  } 
-  @include align-box-center($jc:start, $ai:end);
+  }
+  @include align-box-center($jc: start, $ai: end);
   @include landingPage-styles;
 }
 //landingPage styles end
+
+// Res-Community style start
+@import "components/resCommunity";
+.rescommunity-container {
+  @include rescommunity-styles;
+}
+// Res-Community style end

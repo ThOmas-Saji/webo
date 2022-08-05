@@ -14,7 +14,6 @@ body {
   background-color: $backgorund-white;
 }
 
-
 h1 {
   font-size: 3rem;
   font-weight: 900;
@@ -44,6 +43,11 @@ p {
   font-weight: 350;
 }
 
+@include xxl {
+  html {
+    font-size: 20px;
+  }
+}
 @include xl {
   html {
     font-size: 16px;

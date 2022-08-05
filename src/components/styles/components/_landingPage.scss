@@ -1,14 +1,6 @@
+
 @mixin landingPage-styles {
-  padding-top: 25%;
-  @include md {
-    padding-top: 15%;
-  }
-  @include sm {
-    padding-top: 50%;
-  }
-  @include xsm {
-    padding-top: 55%;
-  }
+  padding-bottom: 2rem;
   .image-box {
     position: absolute;
     width: 100%;
@@ -62,6 +54,12 @@
       rgba(255, 200, 103, 1) 69%,
       rgba(255, 255, 255, 1) 96%
     );
+    @include xxl {
+      width: 30%;
+    }
+    @include xl {
+      width: 30%;
+    }
     @include md {
       width: 40%;
     }
@@ -84,7 +82,7 @@
     }
     button {
       margin: 1rem 0;
-      @include black-btn;
+      @include black-btn($py:0.2rem, $px:0.8rem);
     }
   }
 }
