@@ -1,50 +1,9 @@
 @import "employees";
 
-@mixin rescommunity-styles {
-  height: 95vh;
-  background-color: #0e0e0e;
-
-  .main-box {
-    position: absolute;
-    width: 100%;
-    background: rgb(14, 14, 14);
-    background: radial-gradient(
-      circle,
-      rgba(14, 14, 14, 1) 8%,
-      rgba(14, 14, 14, 0.4490838571756828) 64%
-    );
-    img {
-      opacity: 0.09;
-      width: 100%;
-      height: 95vh;
-    }
-  }
-  .top-text-box {
-    position: relative;
-    color: #fff;
-    padding: 5rem 5rem 1rem 5rem;
-    background: rgb(14, 14, 14);
-    background: linear-gradient(
-      177deg,
-      rgba(14, 14, 14, 1) 0%,
-      rgba(14, 14, 14, 0.6843779748227417) 100%
-    );
-    gap: 30%;
-    @include align-box-center;
-    h5 {
-      min-width: 30%;
-      max-width: 30%;
-    }
-    p {
-      min-width: 30%;
-      max-width: 30%;
-      line-height: 1.2;
-    }
-  }
-
+@mixin lg-xl-xxl {
   .employees-box {
     position: relative;
-    height: 50vh;
+    height: 80vh;
     width: 100%;
     display: grid;
     gap: 1rem;
@@ -64,7 +23,10 @@
       grid-area: 1/4/6/6;
       width: 100%;
       img {
-        transform: scale(1.2);
+        transform: translate(0, 0%) scale(1.2);
+        @include lg {
+          transform: translate(0, 30%) scale(1.3);
+        }
       }
       height: fit-content;
     }
@@ -72,11 +34,116 @@
       grid-area: 1/6/3/9;
     }
     .box-4 {
-      grid-area: 4/1/6/4;
+      grid-area: 3/1/6/4;
       @include align-box-center($jc: end, $ai: end);
     }
     .box-5 {
-      grid-area: 4/6/6/9;
+      grid-area: 3/6/6/9;
+    }
+  }
+}
+
+@mixin rescommunity-styles {
+  height: 90vh;
+  @include lg {
+    height: 80vh;
+  }
+  @include md {
+    height: 80vh;
+  }
+  background-color: #0e0e0e;
+  overflow: hidden;
+  margin-bottom: 5rem;
+  .main-box {
+    position: absolute;
+    width: 100%;
+    background: rgb(14, 14, 14);
+    background: radial-gradient(
+      circle,
+      rgba(14, 14, 14, 1) 100%,
+      rgba(14, 14, 14, 0.4490838571756828) 100%
+    );
+    img {
+      opacity: 0.09;
+      width: 100%;
+      height: 95vh;
+      @include lg {
+        height: 80vh;
+      }
+      @include md {
+        height: 80vh;
+        min-height: 75vh;
+      }
+    }
+  }
+  .top-text-box {
+    position: relative;
+    color: #fff;
+    padding: 5rem 5rem 1rem 5rem;
+    background: rgb(14, 14, 14);
+    background: linear-gradient(
+      177deg,
+      rgba(14, 14, 14, 1) 0%,
+      rgba(14, 14, 14, 0.6843779748227417) 100%
+    );
+    gap: 30%;
+    @include align-box-center;
+    @include md {
+      @include align-box-center($fd: column);
+      padding: 5rem 0rem;
+      gap: 2rem;
+    }
+    h5 {
+      min-width: 30%;
+      max-width: 30%;
+      @include md {
+        min-width: 80%;
+        max-width: 80%;
+        text-align: center;
+      }
+    }
+    p {
+      min-width: 30%;
+      max-width: 30%;
+      line-height: 1.2;
+      @include md {
+        min-width: 80%;
+        max-width: 80%;
+        text-align: center;
+      }
+    }
+  }
+  @include xxl {
+    @include lg-xl-xxl;
+  }
+  @include xl {
+    @include lg-xl-xxl;
+  }
+  @include lg {
+    @include lg-xl-xxl;
+  }
+  @include md {
+    .employees-box {
+      position: relative;
+      height: 50vh;
+      width: 100%;
+      display: flex;
+      padding: 0;
+      @include align-box-center($fd: column);
+      gap: 1rem;
+      .box-1,
+      .box-3,
+      .box-4,
+      .box-5 {
+        z-index: 2;
+        width: 50%;
+        min-width: 300px;
+        height: 10vh;
+        @include align-box-center;
+      }
+      .box-2 {
+        display: none;
+      }
     }
   }
 }

@@ -40,6 +40,9 @@
       $p-c: #00f0ff
     );
     margin-left: -2rem;
+    @include md {
+      margin-left: 0rem;
+    }
   }
   .employee2 {
     @include emp-styles(
@@ -49,6 +52,10 @@
       $p-c: #805100
     );
     margin-left: -2rem;
+    @include md {
+      margin-left: 0rem;
+    }
+    
   }
   .employee3 {
     @include emp-styles(
@@ -58,6 +65,9 @@
       $p-c: #08008b
     );
     margin-right: -2rem;
+    @include md {
+      margin-right: 0rem;
+    }
   }
   .employee4 {
     @include emp-styles(
@@ -67,5 +77,8 @@
       $p-c: #82000e
     );
     margin-top: -2rem;
+    @include md {
+      margin-top: 0rem;
+    }
   }
 }
