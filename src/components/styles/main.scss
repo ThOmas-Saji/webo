@@ -43,3 +43,12 @@
   @include rescommunity-styles;
 }
 // Res-Community style end
+
+// How it works style start
+@import "components/howItWorks";
+@import "components/imageSlider";
+.how-it-works-container {
+  @include howItWorks-styles;
+
+}
+// How it works style end

@@ -1,3 +1,4 @@
+import HowItWorks from './components/HowItWorks';
 import LandingPage from './components/LandingPage';
 import Navbar from './components/Navbar';
 import ResCommunity from './components/ResCommunity';
@@ -8,7 +9,8 @@ function App() {
     <>
       <Navbar />
       <LandingPage />
-      <ResCommunity/>
+      <ResCommunity />
+      <HowItWorks />
     </>
   );
 }
