@@ -26,6 +26,8 @@
 }
 //navbar styles end
 
+// ------------------------------------- 
+
 //landingPage styles start
 @import "components/landingPage";
 .landingPage-container {
@@ -37,6 +39,8 @@
 }
 //landingPage styles end
 
+// ------------------------------------- 
+
 // Res-Community style start
 @import "components/resCommunity";
 .rescommunity-container {
@@ -44,11 +48,23 @@
 }
 // Res-Community style end
 
+// ------------------------------------- 
+
 // How it works style start
 @import "components/howItWorks";
 @import "components/imageSlider";
 .how-it-works-container {
   @include howItWorks-styles;
-
 }
 // How it works style end
+
+// ------------------------------------- 
+
+// Products style start
+@import "components/products";
+.products-container {
+  @include products-styles;
+}
+// Products style end
+
+// ------------------------------------- 

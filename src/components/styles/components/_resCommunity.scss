@@ -1,59 +1,13 @@
 @import "employees";
 
-@mixin lg-xl-xxl {
-  .employees-box {
-    position: relative;
-    height: 80vh;
-    width: 100%;
-    display: grid;
-    gap: 1rem;
-    padding-left: 10%;
-    grid-template-columns: repeat(9, 1fr);
-    div {
-      width: 100%;
-      height: 15vh;
-      // border: 1px solid white;
-      @include employee-style;
-    }
-    .box-1 {
-      grid-area: 1/1/3/4;
-      @include align-box-center($jc: center, $ai: end);
-    }
-    .box-2 {
-      grid-area: 1/4/6/6;
-      width: 100%;
-      img {
-        transform: translate(0, 0%) scale(1.2);
-        @include lg {
-          transform: translate(0, 30%) scale(1.3);
-        }
-      }
-      height: fit-content;
-    }
-    .box-3 {
-      grid-area: 1/6/3/9;
-    }
-    .box-4 {
-      grid-area: 3/1/6/4;
-      @include align-box-center($jc: end, $ai: end);
-    }
-    .box-5 {
-      grid-area: 3/6/6/9;
-    }
-  }
-}
 
 @mixin rescommunity-styles {
-  height: 90vh;
-  @include lg {
-    height: 80vh;
-  }
-  @include md {
-    height: 80vh;
-  }
   background-color: #0e0e0e;
   overflow: hidden;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
+  @include md {
+    margin-bottom: 5rem;
+  }
   .main-box {
     position: absolute;
     width: 100%;
@@ -66,14 +20,6 @@
     img {
       opacity: 0.09;
       width: 100%;
-      height: 95vh;
-      @include lg {
-        height: 80vh;
-      }
-      @include md {
-        height: 80vh;
-        min-height: 75vh;
-      }
     }
   }
   .top-text-box {
@@ -125,7 +71,6 @@
   @include md {
     .employees-box {
       position: relative;
-      height: 50vh;
       width: 100%;
       display: flex;
       padding: 0;
@@ -138,12 +83,49 @@
         z-index: 2;
         width: 50%;
         min-width: 300px;
-        height: 10vh;
         @include align-box-center;
       }
       .box-2 {
         display: none;
       }
+    }
+  }
+}
+
+@mixin lg-xl-xxl {
+  .employees-box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    padding: 0 4rem;
+    grid-template-columns: repeat(9, auto);
+    div {
+      width: 100%;
+      // border: 1px solid white;
+      @include employee-style;
+    }
+    .box-1 {
+      grid-area: 1/1/3/4;
+      @include align-box-center($jc: center, $ai: end);
+    }
+    .box-2 {
+      grid-area: 1/4/6/6;
+      height: fit-content;
+      width: 100%;
+      img {
+        width: 80%;
+      }
+    }
+    .box-3 {
+      grid-area: 1/6/3/9;
+    }
+    .box-4 {
+      grid-area: 3/1/6/4;
+      @include align-box-center($jc: end, $ai: end);
+    }
+    .box-5 {
+      grid-area: 3/6/6/9;
     }
   }
 }
