@@ -68,3 +68,10 @@
 // Products style end
 
 // ------------------------------------- 
+
+//Pricing style start 
+@import "components/pricing";
+.pricing-container {
+  @include pricing-styles;
+}
+//Pricing style end 

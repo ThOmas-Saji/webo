@@ -76,9 +76,9 @@
       $h6-c: #af0013,
       $p-c: #82000e
     );
-    margin-top: -2rem;
+    margin-left: -2rem;
     @include md {
-      margin-top: 0rem;
+      margin: 0rem;
     }
   }
 }
