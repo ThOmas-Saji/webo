@@ -11,7 +11,7 @@ import TheProduct from "./TheProduct";
 
 const Products = () => {
   return (
-    <section className="products-container">
+    <section  id="product" className="products-container">
       <div className="main-box">
         <img src={bgimg} alt="bgimage" />
       </div>

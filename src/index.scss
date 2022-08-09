@@ -13,7 +13,9 @@ body {
   font-family: "Manrope", sans-serif;
   background-color: $backgorund-white;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 h1 {
   font-size: 3rem;
   font-weight: 900;

@@ -14,7 +14,7 @@ const ResCommunity = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <section className="rescommunity-container">
+    <section  id="community" className="rescommunity-container">
       <div className="main-box">
         <img src={lines} alt="lines" />
       </div>

@@ -5,7 +5,7 @@ import { BsCheckLg } from "react-icons/bs";
 
 const Pricing = () => {
   return (
-    <section className="pricing-container">
+    <section  id="pricing" className="pricing-container">
       <div className="bg-image-box">
         <img src={bgimg} alt="bg" />
       </div>

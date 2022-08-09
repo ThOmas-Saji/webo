@@ -7,7 +7,7 @@ import ImageSlider from "./ImageSlider";
 
 const HowItWorks = () => {
   return (
-    <section className="how-it-works-container">
+    <section  id="howitworks" className="how-it-works-container">
       <div className="main-box">
         <div className="steps-box">
           <h3>How it works?</h3>

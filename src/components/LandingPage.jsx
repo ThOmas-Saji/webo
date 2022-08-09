@@ -5,7 +5,7 @@ import bgImagesm2 from "../assets/landingPage-bg-sm2.png";
 
 const LandingPage = () => {
   return (
-    <section className="landingPage-container">
+    <section id="home" className="landingPage-container">
       <div className="image-box">
         <img className="img-full" src={bgImage} alt="bg" />
         <img className="img-tab" src={bgImagesm} alt="bg" />
